@@ -8,8 +8,7 @@ const app = express();
 
 // use the cors middleware with the
 // origin and credentials options
-app.use(cors({ origin: 'http://localhost:5173', credentials: true }));
-// use the body-parser middleware to parse JSON and URL-encoded data
+app.use(cors({ origin: true, credentials: true }));// use the body-parser middleware to parse JSON and URL-encoded data
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -20,6 +19,6 @@ app.use("/api/books", routes);
 // Connect Database
 connectDB();
 
-app.get("/", (req, res) => res.send("Hello world!"));
+app.get("/", (req, res) => res.send("Hello world ass fuck!"));
 const port = process.env.PORT;
 app.listen(port, () => console.log(`Server running on port ${port}`));
